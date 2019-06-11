@@ -20,6 +20,7 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 
 * Jupyter ([Datacamp](https://datacamp-community-prod.s3.amazonaws.com/48093c40-5303-45f4-bbf9-0c96c0133c40))
 * Numpy ([Datacamp](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf))
+* Pandas ([Datacamp](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf))
 * Scikit-learn ([Datacamp](https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116)) 
 * Matplotlib ([Datacamp](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf))
 * Seaborn ([Datacamp](https://datacamp-community-prod.s3.amazonaws.com/f9f06e72-519a-4722-9912-b5de742dbac4))
