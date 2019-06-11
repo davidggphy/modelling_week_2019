@@ -1,4 +1,5 @@
 # modelling_week_2019
+
 Credit Card Fraud Detection problem for the Modelling Week 2019
 
 The problem can be approached in three ways: supervised, unsupervised and mixed. We are going to start using a supervised approach, since it is simpler. If time permits, we'll explore unsupervised methods (a really interesting field), such as:
@@ -6,13 +7,16 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 * Local outlier factor (LOF)
 * Isolation Forest
 * Neural Networks (Auto encoders)
+
 ## Python libraries
-`pandas`,`matplotlib`,`seaborn`,`sklearn`,`keras`
+`jupyter`,`pandas`,`matplotlib`,`seaborn`,`sklearn`,`keras`
 
 ## Outline
-* Exploratory data analysis, cleaning and preprocessing. Basic feature engineering.
-* Overfitting. Validation scheme. Difference between train, validation and test sets. Checks.
-* Classification algorithms in `sklearn`. Hyperparameter tuning. 
+* Basic programming with python and `jupyter`
+* Exploratory data analysis, cleaning and preprocessing. Feature engineering.
+* Overfitting. Validation scheme. Difference between train, validation and test sets.
+* Metrics: precision, recall, ROC curve, AUC (ROC), F1, confusion matrix.
+* Classification algorithms in `sklearn`. Comments on hyperparameter tuning. 
 * Combination of models. Calibration. Ensembling and Stacking.
 * Neural Networks in `keras`. Unsupervised methods:
     * Feed Forward Neural Network for classification.
