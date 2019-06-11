@@ -10,7 +10,7 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 
 
 ## Bibliography
-
+* Leo Breiman “Statistical Modeling: The Two Cultures” (2001) ([Breiman](http://www.stat.cmu.edu/~ryantibs/journalclub/breiman_2001.pdf))
  * Elements of Statistical Learning ([ESL](https://web.stanford.edu/~hastie/ElemStatLearn/))
  * Introduction to Statistical Learning with R ([ISLR](http://www-bcf.usc.edu/~gareth/ISL/))
  * Pattern Recognition and Machine Learning ([Bishop](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf))
