@@ -6,11 +6,22 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 * Local outlier factor (LOF)
 * Isolation Forest
 * Neural Networks (Auto encoders)
+## Python libraries
+`pandas`,`matplotlib`,`seaborn`,`sklearn`,`keras`
 
-
+## Outline
+* Exploratory data analysis, cleaning and preprocessing. Basic feature engineering.
+* Overfitting. Validation scheme. Difference between train, validation and test sets. Checks.
+* Classification algorithms in `sklearn`. Hyperparameter tuning. 
+* Combination of models. Calibration. Ensembling and Stacking.
+* Neural Networks in `keras`. Unsupervised methods:
+    * Feed Forward Neural Network for classification.
+    * Autoencoder as an anomaly detector (unsupervised)
+    * Autoencoder as a feature builder (unsupervised)
+* Combination of unsupervised and supervised methods.
 
 ## Bibliography
-* Leo Breiman “Statistical Modeling: The Two Cultures” (2001) ([Breiman](http://www.stat.cmu.edu/~ryantibs/journalclub/breiman_2001.pdf))
+*  **Leo Breiman “Statistical Modeling: The Two Cultures” (2001)** ([Breiman](http://www.stat.cmu.edu/~ryantibs/journalclub/breiman_2001.pdf))
  * Elements of Statistical Learning ([ESL](https://web.stanford.edu/~hastie/ElemStatLearn/))
  * Introduction to Statistical Learning with R ([ISLR](http://www-bcf.usc.edu/~gareth/ISL/))
  * Pattern Recognition and Machine Learning ([Bishop](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf))
