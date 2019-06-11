@@ -17,6 +17,7 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 * Overfitting. Validation scheme. Difference between train, validation and test sets.
 * Metrics: precision, recall, ROC curve, AUC (ROC), F1, confusion matrix.
 * Classification algorithms in `sklearn`. Comments on hyperparameter tuning. 
+* `xgboost`
 * Combination of models. Calibration. Ensembling and Stacking.
 * Neural Networks in `keras`. Unsupervised methods:
     * Feed Forward Neural Network for classification.
@@ -41,7 +42,8 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 * Seaborn ([Datacamp](https://datacamp-community-prod.s3.amazonaws.com/f9f06e72-519a-4722-9912-b5de742dbac4))
   
 ## Resources
-
+  * Using `xgboost` in Python ([Datacamp](https://www.datacamp.com/community/tutorials/xgboost-in-python))
+  * Combine `xgboost` and `sklearn` ([GitHub](https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py))
   * [Videos and slides ISLR](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)
   * [Machine Learning cheatsheets](https://stanford.edu/~shervine/teaching/cs-229/)
 
