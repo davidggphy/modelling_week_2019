@@ -15,7 +15,7 @@ The problem can be approached in three ways: supervised, unsupervised and mixed.
 * Basic programming with python and `jupyter`
 * Exploratory data analysis, cleaning and preprocessing. Feature engineering.
 * Overfitting. Validation scheme. Difference between train, validation and test sets.
-* Metrics: precision, recall, ROC curve, AUC (ROC), F1, confusion matrix.
+* Metrics: precision, recall, ROC curve, AUC (ROC), F1, confusion matrix. Focus on unbalanced datasets.
 * Classification algorithms in `sklearn`. Comments on hyperparameter tuning. 
 * `xgboost`
 * Combination of models. Calibration. Ensembling and Stacking.
