@@ -37,7 +37,7 @@ def plot_confusion_matrix(y_true, y_pred, labels=None,
         if normalize:
             title = 'Normalized confusion matrix'
         else:
-            title = 'Confusion matrix, without normalization'
+            title = 'Confusion matrix (Counts)'
 
     # Compute confusion matrix
     cm = confusion_matrix(y_true, y_pred)
@@ -51,7 +51,7 @@ def plot_confusion_matrix(y_true, y_pred, labels=None,
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
         print("Normalized confusion matrix")
     else:
-        print('Confusion matrix, without normalization')
+        print('Confusion matrix (Counts)')
 
     print(cm)
 
@@ -81,3 +81,6 @@ def plot_confusion_matrix(y_true, y_pred, labels=None,
                     color="white" if cm[i, j] > thresh else "black")
     fig.tight_layout()
     return ax
+
+
+
