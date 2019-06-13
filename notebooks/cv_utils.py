@@ -9,7 +9,57 @@ from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import roc_curve
 
 
+def print_scores_cv(scores, print_timing=False):
+    """
+    Print the scores returned by sklearn.model_selection.cross_validate.
+    Parameters
+    ==========
+    print_timing : bool, default=False
+        If True, print also 'fit_time' and 'score_time'
+    Returns
+    =======
+    None
+    """
+    for name, vector in scores.items():
+        if print_timing:
+            print('{}: {:.2f} +- {:.2f}'.format(name, vector.mean(),
+                                                vector.std(ddof=1)))
+        else:
+            if name not in ['fit_time', 'score_time']:
+                print('{}: {:.2f} +- {:.2f}'.format(name, vector.mean(),
+                                                    vector.std(ddof=1)))
+    return None
+
+
 def run_cv_f1(clf, cv, X, y, calculate_on_train=True, verbose=True):
+    """
+    Print the scores returned by sklearn.model_selection.cross_validate.
+    Parameters
+    ----------
+    clf : estimator object implementing 'fit'
+        The object to use to fit the data.
+
+    X : array-like
+        The data to fit. Can be for example a list, or an array.
+
+    y : array-like
+        The target variable to try to predict.
+
+    cv : cross-validation generator or an iterable
+
+    calculate_on_train : bool, default=True
+        Calculate metrics on train set
+
+    verbose : bool, default=True
+        Print a message at the end of the fold and the
+        mean and std of the metric f1_score.
+
+    Returns
+    =======
+    metrics : np.array
+    metrics_train : np.array
+        Optional, if calculate_on_train=True.
+    """
     # We create two eampty lists to save the metrics at each fold for train
     # and validation.
     metrics = []
@@ -55,7 +105,7 @@ def run_cv_f1(clf, cv, X, y, calculate_on_train=True, verbose=True):
         return metrics
 
 
-def plot_cv_roc(clf, cv, X, y, figsize = (8,8)):
+def plot_cv_roc(clf, cv, X, y, figsize=(8, 8)):
     """
     Plots the ROC curve for the cross-validation sets.
     Parameters
@@ -118,7 +168,7 @@ def plot_cv_roc(clf, cv, X, y, figsize = (8,8)):
     plt.show()
 
 
-def plot_cv_roc_prc(clf, cv, X, y, figsize = (16,8)):
+def plot_cv_roc_prc(clf, cv, X, y, figsize=(16, 8)):
     """
     Plots the ROC and Precision-Recall curves for the cross-validation sets.
     Parameters
