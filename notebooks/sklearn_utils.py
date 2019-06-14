@@ -15,7 +15,42 @@ clf_ = LogisticRegression()
 clf = make_pipeline(feat_select, clf_)
 
 """
+import numpy as np
+
 from sklearn.preprocessing import FunctionTransformer
+
+
+def hard_vote_predict(estimators, X, weights=None):
+    """
+    Combine a dictionary of estimators to create a hard voting ensemble.
+    Parameters
+    ----------
+    estimators : dict
+        Dictionary with name (str): model entries with predict method.
+        If the method predict returns probabilities, then the name should
+        end with 'prob'.
+    X : np.array
+        Input.
+    weights : list, tuple or np.array, default=None
+        List of weights for each estimator. If None, then it is uniform.
+    """
+    if weights is None:
+        weights = np.ones(len(estimators))
+    else:
+        assert len(weights) == len(
+            estimators), 'Number of estimators should be the same as number of weights'
+        weights = np.array(weights)
+    weights = weights.reshape((-1, 1))
+    y_preds = []
+    for name, clf in estimators.items():
+        y_pred = clf.predict(X)
+        if name.endswith('prob'):
+            y_pred = (1 * (y_pred > 0.5)).reshape((-1))
+        y_preds.append(y_pred)
+
+    y_preds = np.array(y_preds)
+    y_final = 1 * (np.mean(weights * y_preds, axis=0) > 0.5)
+    return y_final
 
 
 def FeatureSelector(list_features_idx):
